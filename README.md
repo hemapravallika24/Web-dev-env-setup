@@ -43,4 +43,4 @@ This project marks the beginning of my 45-day internship journey at ApexPlanet S
 ## 🔗 Links
 
 - 🔗 [LinkedIn Video Demo](https://linkedin.com/your-video-link-here)
-- 🔗 [GitHub Repository](https://github.com/yourusername/task1-dev-setup)
+- 🔗 [GitHub Repository](https://github.com/hemapravallika24/Web-dev-env-setup)
