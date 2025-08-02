@@ -28,7 +28,7 @@ This project marks the beginning of my 45-day internship journey at ApexPlanet S
 
 1. Open XAMPP and start **Apache** & **MySQL**
 2. Place the project folder in `htdocs` directory (if using XAMPP)
-3. Open browser and go to `http://localhost/task1-dev-setup/index.php`
+3. Open browser and go to `http://localhost/Web-dev-env-setup/index.php`
 
 ---
 
