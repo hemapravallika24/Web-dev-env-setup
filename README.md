@@ -1,50 +1,49 @@
-# Task 1 – Web Development Internship @ ApexPlanet
+# Basic PHP CRUD App with Authentication (MySQL)
 
-This project marks the beginning of my 45-day internship journey at ApexPlanet Software Pvt. Ltd. Task 1 involves setting up a complete PHP & MySQL development environment and initializing version control with Git and GitHub.
+## What this includes
+- User registration & login (password hashing with `password_hash`)
+- Create, Read, Update, Delete posts
+- Session-based auth (only logged-in users can create/edit/delete)
+- PDO + prepared statements
+- Minimal Bootstrap for quick styling
 
----
+## Prerequisites
+- PHP 8+ with PDO MySQL extension
+- MySQL 5.7+/MariaDB 10+
+- A web server (Apache, Nginx) or PHP built-in server
 
-## 🔧 Setup Details
+## Setup
+1. Create the database and tables:
+   ```sql
+   SOURCE db.sql;
+   ```
 
-### ✅ Tools Installed
-- **XAMPP** (PHP & MySQL local server)
-- **VS Code** (Code editor with PHP plugins)
-- **Git** (Version Control)
-- **GitHub** (Remote Repository)
+2. Update DB credentials in `config.php`:
+   ```php
+   $DB_HOST = "127.0.0.1";
+   $DB_NAME = "blog";
+   $DB_USER = "root";
+   $DB_PASS = "";
+   ```
 
-### 💡 Objective
-- Verify working PHP environment using `index.php`
-- Use Git for version tracking
-- Create a GitHub repo and push the project
+3. Start a server:
+   - Built-in PHP server (from project root):  
+     ```bash
+     php -S localhost:8000
+     ```
+   - Or configure Apache/Nginx to point to this folder.
 
----
+4. Open in your browser:
+   - `http://localhost:8000/`
 
-## 📂 Project Structure
+## Default pages
+- `/` — Posts list
+- `/register.php` — Register
+- `/login.php` — Login
+- `/logout.php` — Logout
+- `/create.php` — New post (requires login)
+- `/edit.php?id=...` — Edit post (requires login)
+- `/delete.php` — Delete post (requires login; POST only)
 
-
----
-
-## 🚀 How to Run
-
-1. Open XAMPP and start **Apache** & **MySQL**
-2. Place the project folder in `htdocs` directory (if using XAMPP)
-3. Open browser and go to [http://localhost/task1-setup/index.php](http://localhost/task1-setup/index.php)
-
-
-
-
-
----
-
-## 🎓 Internship Info
-
-- **Internship Provider**: ApexPlanet Software Pvt. Ltd.
-- **Domain**: Web Development (PHP & MySQL)
-- **Task 1**: Development Environment Setup
-
----
-
-## 🔗 Links
-
-- 🔗 [LinkedIn Video Demo](https://linkedin.com/your-video-link-here)
-- 🔗 [GitHub Repository](https://github.com/hemapravallika24/Web-dev-env-setup)
+## Notes
+- This is a teaching/demo project. For production, add CSRF tokens, stronger validation, and stricter error handling.
