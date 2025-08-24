@@ -1,49 +1,70 @@
-# Basic PHP CRUD App with Authentication (MySQL)
+# Web Development Environment & CRUD Application
 
-## What this includes
-- User registration & login (password hashing with `password_hash`)
-- Create, Read, Update, Delete posts
-- Session-based auth (only logged-in users can create/edit/delete)
-- PDO + prepared statements
-- Minimal Bootstrap for quick styling
+This repository contains two tasks:
 
-## Prerequisites
-- PHP 8+ with PDO MySQL extension
-- MySQL 5.7+/MariaDB 10+
-- A web server (Apache, Nginx) or PHP built-in server
+---
 
-## Setup
-1. Create the database and tables:
-   ```sql
-   SOURCE db.sql;
-   ```
+## 📌 Task-1: Setting Up the Development Environment
 
-2. Update DB credentials in `config.php`:
-   ```php
-   $DB_HOST = "127.0.0.1";
-   $DB_NAME = "blog";
-   $DB_USER = "root";
-   $DB_PASS = "";
-   ```
+**Objective:**  
+Set up a local development environment for PHP and MySQL, and configure Git/GitHub for version control.
 
-3. Start a server:
-   - Built-in PHP server (from project root):  
-     ```bash
-     php -S localhost:8000
-     ```
-   - Or configure Apache/Nginx to point to this folder.
+**Steps Completed:**
+1. Installed **XAMPP** (Apache + MySQL). Verified installation at `http://localhost`.
+2. Installed **VS Code** with PHP-related extensions.
+3. Installed **Git** and set up a **GitHub repository**.
+4. Initialized repository with basic project structure (`index1.php`, `README1.md`).
 
-4. Open in your browser:
-   - `http://localhost:8000/`
+**Deliverables:**
+- A working local server environment.
+- A GitHub repo with initial commit (Task-1 files: `index1.php`, `README1.md`).
 
-## Default pages
-- `/` — Posts list
-- `/register.php` — Register
-- `/login.php` — Login
-- `/logout.php` — Logout
-- `/create.php` — New post (requires login)
-- `/edit.php?id=...` — Edit post (requires login)
-- `/delete.php` — Delete post (requires login; POST only)
+---
 
-## Notes
-- This is a teaching/demo project. For production, add CSRF tokens, stronger validation, and stricter error handling.
+## 📌 Task-2: Basic CRUD Application with User Authentication
+
+**Objective:**  
+Develop a simple blog-style web application to perform CRUD operations with user login/logout.
+
+**Database Setup:**
+- Database: `blog`
+- Tables:  
+  - `users (id, username, password)`  
+  - `posts (id, title, content, created_at, user_id)`
+
+**Features Implemented:**
+- **User Authentication:**
+  - Registration with `password_hash`
+  - Login with `password_verify`
+  - Session management for login/logout
+- **CRUD for Posts:**
+  - Create: `create.php`
+  - Read: `index.php`, `view.php`
+  - Update: `edit.php`
+  - Delete: `delete.php`
+- **Extras:**
+  - `config.php` for DB connection
+  - `header.php` / `footer.php` for layout
+  - `db.sql` for schema setup
+
+**How to Run:**
+1. Import the `db.sql` file into MySQL.
+2. Update database credentials in `config.php`.
+3. Start Apache & MySQL in XAMPP.
+4. Run the app at: `http://localhost/task1-setup/`
+
+**Deliverables:**
+- Functional CRUD app with authentication.
+- Database schema and documentation in `db.sql`.
+
+---
+
+## 📂 Repo Structure
+
+---
+
+## ✅ Summary
+- **Task-1:** Environment setup & GitHub repo.  
+- **Task-2:** Blog CRUD application with authentication.  
+
+Now the repo contains both tasks for review.
